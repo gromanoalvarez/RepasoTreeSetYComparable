@@ -58,5 +58,37 @@ public class TreeSetTest {
 		assertTrue(empleadosOrdenados.contains(german));
 		assertFalse(empleadosOrdenados.isEmpty());
 	}
+	
+	@Test
+	public void queTreeSetOdeneDeMenorAMayorPorDni(){
+		TreeSet<Empleado> empleadosOrdenados = new TreeSet<Empleado>();
+		assertNotNull(empleadosOrdenados);
+
+		Empleado pedro = new Empleado(340, "pedro", "X");
+		assertNotNull(pedro);
+
+		Empleado cintia = new Empleado(1, "cintia", "w"); 
+		assertNotNull(cintia);
+		
+		Empleado veronica = new Empleado(99999999, "veronica", "w"); 
+		assertNotNull(veronica);
+		
+		Empleado JOSE = new Empleado(500, "JOSE", "w"); 
+		assertNotNull(JOSE);
+
+		empleadosOrdenados.add(pedro);
+		empleadosOrdenados.add(cintia);
+		empleadosOrdenados.add(veronica);
+		empleadosOrdenados.add(JOSE);
+
+		final Integer RESULTADO_ESPERADO=4;
+		
+		assertEquals(RESULTADO_ESPERADO, (Integer)empleadosOrdenados.size());
+		assertEquals(cintia, empleadosOrdenados.first());
+		assertEquals(veronica, empleadosOrdenados.last());
+
+		assertTrue(empleadosOrdenados.contains(pedro));
+		assertFalse(empleadosOrdenados.isEmpty());
+	}
 
 }

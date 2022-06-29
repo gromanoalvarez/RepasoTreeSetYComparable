@@ -1,6 +1,6 @@
 package ar.edu.unlam.pb2;
 
-public class Persona {
+public class Persona  {
 	
 	private Integer dni;
 	private String nombre;
@@ -27,6 +27,8 @@ public class Persona {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+
 
 	
 }
